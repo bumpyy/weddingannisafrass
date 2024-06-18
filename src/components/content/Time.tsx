@@ -46,16 +46,16 @@ export default function Time() {
         </p>
       </Event>
 
-      <h2 className="font-noto-serif-display my-4 italic text-primary text-lg">
+      <h2 className="my-4 font-noto-serif-display italic text-primary text-lg">
         Wedding Event
       </h2>
 
       <Button
         asChild
-        className="font-noto-serif-display mb-4 px-8 font-semibold italic text-lg"
+        className="mb-4 px-8 font-noto-serif-display font-semibold italic text-lg"
       >
         <a
-          href=""
+          href="https://maps.app.goo.gl/t9iVCDwwV6kAxs9u5?g_st=ic"
           //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
           target="_blank"
           className=""
@@ -127,7 +127,7 @@ export function Event({
       </ScrollAnimation>
       <p className="font-sanchez font-thin">{date}</p>
       <p className="font-sanchez font-thin">{time}</p>
-      <div className="text-xxs font-playfair-display font-light">
+      <div className="font-playfair-display font-light text-xxs">
         {children}
       </div>
 

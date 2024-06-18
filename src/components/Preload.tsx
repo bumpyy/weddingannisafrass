@@ -40,10 +40,8 @@ export default function Preload({
           className="px-4 font-semibold leading-none text-black text-xl"
           onClick={() => {
             setIsAnimating(true);
-            //   const audio = document.getElementById(
-            //     "audio",
-            //   ) as HTMLAudioElement;
-            //   audio?.play();
+            const audio = document.getElementById("audio") as HTMLAudioElement;
+            audio?.play();
           }}
         >
           <HomeIcon className="mr-2 size-6" /> Buka Undangan
