@@ -60,7 +60,7 @@ export default function Rsvp() {
         <p className="">M arif prasetyo</p>
 
         <CopyToClipboard
-          text={"6395468077"}
+          text={"1270011569017"}
           onCopy={() => {
             toast({
               title: "Tersalin : M arif prasetyo",
