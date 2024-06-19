@@ -53,12 +53,12 @@ export default function GalleryCarousel() {
       <h2 className="mb-8 text-center font-noto-serif-display italic text-lg">
         Our Gallery
       </h2>
-      <Carousel setApi={setApi} className="mx-auto w-full max-w-xs">
+      <Carousel setApi={setApi} className="mx-auto w-full max-w-64 sm:max-w-xs">
         <CarouselContent>
           {photos.map((photo) => (
             <CarouselItem key={photo.name}>
               <Card>
-                <CardContent className="flex aspect-square items-center justify-center p-6">
+                <CardContent>
                   <Dialog key={photo.name}>
                     <DialogTrigger>
                       <div
