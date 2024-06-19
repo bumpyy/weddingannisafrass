@@ -53,45 +53,43 @@ export default function GalleryCarousel() {
       <h2 className="mb-8 text-center font-noto-serif-display italic text-lg">
         Our Gallery
       </h2>
-      <div className="grid grid-cols-1 content-center items-center justify-items-center">
-        <Carousel setApi={setApi} className="w-full max-w-xs">
-          <CarouselContent>
-            {photos.map((photo) => (
-              <CarouselItem key={photo.name}>
-                <Card>
-                  <CardContent className="flex aspect-square items-center justify-center p-6">
-                    <Dialog key={photo.name}>
-                      <DialogTrigger>
-                        <div
-                          key={photo.name}
-                          className="aspect-square cursor-pointer overflow-hidden rounded-md transition-transform duration-700 hover:scale-110"
-                        >
-                          <img
-                            src={`assets/images/${photo.name}_thumb.jpeg`}
-                            className={`h-full w-full object-cover ${photo.position}`}
-                            alt=""
-                          />
-                        </div>
-                      </DialogTrigger>
-                      <DialogContent>
+      <Carousel setApi={setApi} className="mx-auto w-full max-w-xs">
+        <CarouselContent>
+          {photos.map((photo) => (
+            <CarouselItem key={photo.name}>
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <Dialog key={photo.name}>
+                    <DialogTrigger>
+                      <div
+                        key={photo.name}
+                        className="aspect-square cursor-pointer overflow-hidden rounded-md transition-transform duration-700 hover:scale-110"
+                      >
                         <img
-                          src={`assets/images/${photo.name}.jpeg`}
+                          src={`assets/images/${photo.name}_thumb.jpeg`}
                           className={`h-full w-full object-cover ${photo.position}`}
                           alt=""
                         />
-                      </DialogContent>
-                    </Dialog>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-        <div className="py-2 text-center text-muted-foreground text-sm">
-          Photo {current} of {count}
-        </div>
+                      </div>
+                    </DialogTrigger>
+                    <DialogContent>
+                      <img
+                        src={`assets/images/${photo.name}.jpeg`}
+                        className={`h-full w-full object-cover ${photo.position}`}
+                        alt=""
+                      />
+                    </DialogContent>
+                  </Dialog>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+      <div className="py-2 text-center text-muted-foreground text-sm">
+        Photo {current} of {count}
       </div>
       <StarIcon className="right-0 top-0 size-14" />
       <StarIcon className="bottom-0 left-0 size-16" />
