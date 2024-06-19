@@ -29,6 +29,9 @@ export default {
       "frank-ruhl-libre": "Frank Ruhl Libre",
     },
     extend: {
+      backgroundPosition: {
+        "pos-wish": "left 52% center",
+      },
       backgroundImage: {
         wish: "url('/assets/images/gallery_1.jpeg')",
       },

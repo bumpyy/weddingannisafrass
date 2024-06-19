@@ -74,7 +74,7 @@ export default function Wish() {
   };
 
   return (
-    <section className="bg-wish bg-cover bg-center bg-no-repeat py-8 text-center font-catchy-mager text-secondary">
+    <section className="bg-pos-wish bg-wish bg-cover bg-no-repeat py-8 text-center font-catchy-mager text-secondary">
       <div className="container space-y-4">
         <ScrollAnimation animateIn="tada">
           <h2 className="font-playwrite-tz font-bold text-xl">Make a Wish</h2>

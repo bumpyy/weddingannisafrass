@@ -1,6 +1,7 @@
 import { HomeIcon } from "lucide-react";
 import { Dispatch, SetStateAction, useState } from "react";
 import { MEMPELAI_PRIA, MEMPELAI_WANITA } from "../lib/constants";
+import StarIcon from "./StarIcon";
 import { Button } from "./ui/button";
 
 export default function Preload({
@@ -19,13 +20,13 @@ export default function Preload({
           openHandler(true);
         }
       }}
-      className={`${isAnimating ? "animate-once animate-slide-up" : ""} fixed flex h-svh w-full flex-col items-center justify-start overflow-y-hidden bg-secondary pt-8`}
+      className={`${isAnimating ? "animate-once animate-slide-up" : ""} fixed flex h-screen w-full flex-col items-center justify-between overflow-y-hidden bg-secondary pt-8`}
     >
-      <div className="container w-full max-w-2xl space-y-8 text-center text-primary">
+      <div className="container relative w-full max-w-2xl space-y-8 text-center text-primary">
         <h1 className="animate-once animate-fade-down font-catchy-mager font-thin">
           Undangan Pernikahan
         </h1>
-        <div className="animate-fade-down animate-once animate-delay-200 flex flex-col space-y-2 font-playfair-display italic text-7xl">
+        <div className="animate-fade-down animate-once animate-delay-200 flex flex-col space-y-2 font-playfair-display italic text-6xl">
           <p className="self-start">{MEMPELAI_WANITA}</p>
           <p className="self-center text-5xl">&</p>
           <p className="self-end pr-8">{MEMPELAI_PRIA}</p>
@@ -46,10 +47,14 @@ export default function Preload({
         >
           <HomeIcon className="mr-2 size-6" /> Buka Undangan
         </Button>
+        <StarIcon />
       </div>
-      <div>
-        <img src="assets/images/preload.png" alt="preload image" />
-      </div>
+      <img
+        className="max-h-1/2"
+        src="assets/images/preload.png"
+        alt="preload image"
+        draggable={false}
+      />
     </div>
   );
 }

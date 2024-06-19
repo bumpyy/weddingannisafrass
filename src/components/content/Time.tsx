@@ -1,5 +1,6 @@
 import { useCountdown } from "@/lib/hooks";
 import ScrollAnimation from "react-animate-on-scroll";
+import StarIcon from "../StarIcon";
 import { Button } from "../ui/button";
 
 export default function Time() {
@@ -7,7 +8,7 @@ export default function Time() {
 
   return (
     <section
-      className="container flex flex-col items-center gap-4 text-center text-accent"
+      className="container relative flex flex-col items-center gap-4 py-20 text-center text-accent"
       id="waktu"
     >
       <Event
@@ -71,6 +72,9 @@ export default function Time() {
         <CountdownCard text="Menit" countdown={minutes} />
         <CountdownCard text="Detik" countdown={seconds} />
       </div>
+
+      <StarIcon />
+      <StarIcon className="bottom-0 left-0 size-24" />
     </section>
   );
 }

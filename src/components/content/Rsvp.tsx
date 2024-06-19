@@ -1,6 +1,7 @@
 import { CopyIcon } from "lucide-react";
 import ScrollAnimation from "react-animate-on-scroll";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import StarIcon from "../StarIcon";
 import { Button } from "../ui/button";
 import { ToastAction } from "../ui/toast";
 import { useToast } from "../ui/use-toast";
@@ -11,7 +12,7 @@ export default function Rsvp() {
   return (
     <section
       id="share-love"
-      className="container my-12 flex flex-col gap-8 text-center font-catchy-mager font-thin tracking-wider text-accent"
+      className="container relative my-12 flex flex-col gap-8 pb-16 text-center font-catchy-mager font-thin tracking-wider text-accent"
     >
       <ScrollAnimation animateIn="tada">
         <h2 className="font-playwrite-tz capitalize text-3xl">Share Love</h2>
@@ -91,6 +92,9 @@ export default function Rsvp() {
           Bandung, 40395
         </p>
       </ScrollAnimation>
+
+      <StarIcon className="right-0 top-0 size-16" />
+      <StarIcon className="bottom-0 left-0 size-20" />
     </section>
   );
 }
