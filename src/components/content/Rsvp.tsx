@@ -77,7 +77,7 @@ export default function Rsvp() {
         </CopyToClipboard>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn="tada">
+      <ScrollAnimation animateIn="fadeInUp">
         <h2 className="font-playwrite-tz capitalize text-2xl">Send gift</h2>
       </ScrollAnimation>
 
