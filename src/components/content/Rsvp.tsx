@@ -14,7 +14,7 @@ export default function Rsvp() {
       id="share-love"
       className="container relative my-12 flex flex-col gap-8 pb-16 text-center font-catchy-mager font-thin tracking-wider text-accent"
     >
-      <ScrollAnimation animateIn="tada">
+      <ScrollAnimation animateIn="fadeInUp">
         <h2 className="font-playwrite-tz capitalize text-3xl">Share Love</h2>
       </ScrollAnimation>
 
