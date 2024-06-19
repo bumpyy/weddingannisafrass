@@ -22,7 +22,7 @@ export default function Rsvp() {
         animateIn="fadeInUp"
         className="mt-2 flex flex-col items-center justify-center text-center text-xs sm:text-xl"
       >
-        <p className="text-justify text-start text-sm">
+        <p className="text-justify text-sm">
           Doa & restu anda di pernikahan kami tentunya sangat berarti. Namun
           jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan
           akan semakin melengkapi kebahagiaan kami.
