@@ -124,16 +124,16 @@ export function Event({
   return (
     <div className="flex flex-col gap-1 text-primary">
       <ScrollAnimation
-        animateIn="tada"
+        animateIn="fadeInUp"
         className="font-thin tracking-wider text-primary"
       >
         <h2 className="font-playfair-display uppercase text-xl">{title}</h2>
+        <p className="font-sanchez font-thin">{date}</p>
+        <p className="font-sanchez font-thin">{time}</p>
+        <div className="font-playfair-display font-light text-xxs">
+          {children}
+        </div>
       </ScrollAnimation>
-      <p className="font-sanchez font-thin">{date}</p>
-      <p className="font-sanchez font-thin">{time}</p>
-      <div className="font-playfair-display font-light text-xxs">
-        {children}
-      </div>
 
       {addDivider && (
         <div className="mx-auto mt-2 w-3/5 flex-grow border-t border-white"></div>

@@ -32,8 +32,8 @@ export default function Preload({
           <p className="self-end pr-8">{MEMPELAI_PRIA}</p>
         </div>
         <div className="mx-auto max-w-xs font-futura font-thin text-white">
-          <p className="font-semibold text-xl">{guestName ?? "Guest"}</p>
-          Mohon maaf apabila ada kesalahan penulisan nama & gelar
+          {guestName && <p className="font-semibold text-xl">{guestName}</p>}
+          <p>Mohon maaf apabila ada kesalahan penulisan nama & gelar</p>
         </div>
         <Button
           variant={"outline"}

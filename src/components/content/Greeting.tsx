@@ -34,7 +34,7 @@ export default function Greeting() {
             وَمِنْ كُلِّ شَيْءٍ خَلَقْنَا زَوْجَيْنِ لَعَلَّكُمْ تَذَكَّرُوْنَ
           </p>
           <p>
-            Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu
+            "Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu
             mengingat (kebesaran Allah)." (QS. Az Zariyat: 49)
           </p>
         </div>
