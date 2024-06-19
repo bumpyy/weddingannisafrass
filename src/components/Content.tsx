@@ -1,7 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Gallery from "./Gallery";
+import GalleryCarousel from "./GalleryCarousel";
 import About from "./content/About";
 import Greeting from "./content/Greeting";
 import Rsvp from "./content/Rsvp";
@@ -29,7 +29,8 @@ export default function Content() {
         {/* <!-- End Waktu Content --> */}
 
         {/* <!-- Begin Lokasi Section --> */}
-        <Gallery />
+        {/* <Gallery /> */}
+        <GalleryCarousel />
         {/* <!-- End Lokasi Content --> */}
 
         {/* <!-- Begin RSVP Content --> */}
