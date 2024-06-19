@@ -40,7 +40,7 @@ export default function Greeting() {
         </div>
       </div>
 
-      <StarIcon className="size-16" />
+      <StarIcon className="right-0 top-0 size-16" />
       <FlowerIcon className="bottom-0 left-0 size-32" />
 
       <img
