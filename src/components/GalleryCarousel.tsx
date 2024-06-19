@@ -53,7 +53,7 @@ export default function GalleryCarousel() {
       <h2 className="mb-8 text-center font-noto-serif-display italic text-lg">
         Our Gallery
       </h2>
-      <div className="grid grid-cols-1 content-center items-center justify-items-center gap-4">
+      <div className="grid grid-cols-1 content-center items-center justify-items-center">
         <Carousel setApi={setApi} className="w-full max-w-xs">
           <CarouselContent>
             {photos.map((photo) => (
