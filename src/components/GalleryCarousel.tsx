@@ -18,17 +18,17 @@ export default function GalleryCarousel() {
     name: string;
     position: "object-top" | "object-center" | "object-bottom";
   }[] = [
-    { name: "gallery_7", position: "object-center" },
-    { name: "gallery_1", position: "object-center" },
-    { name: "gallery_6", position: "object-center" },
+    { name: "bride_female", position: "object-center" }, //4->1
+    { name: "gallery_7", position: "object-center" }, //1->2
+    { name: "gallery_1", position: "object-center" }, //2->3
 
-    { name: "bride_female", position: "object-center" },
-    { name: "gallery_2", position: "object-center" },
-    { name: "bride_male", position: "object-center" },
+    { name: "gallery_2", position: "object-center" }, //5->4
+    { name: "gallery_6", position: "object-center" }, //3->5
+    { name: "gallery_3", position: "object-bottom" }, //8->6
 
-    { name: "gallery_4", position: "object-center" },
-    { name: "gallery_3", position: "object-bottom" },
-    { name: "gallery_5", position: "object-top" },
+    { name: "bride_male", position: "object-center" }, //6->7
+    { name: "gallery_4", position: "object-center" }, //7->8
+    // { name: "gallery_5", position: "object-top" },//9
   ];
 
   const [api, setApi] = React.useState<CarouselApi>();
