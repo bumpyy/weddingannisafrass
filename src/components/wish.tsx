@@ -74,10 +74,18 @@ export default function Wish() {
   };
 
   return (
-    <section className="bg-pos-wish bg-wish bg-cover bg-no-repeat py-8 text-center font-catchy-mager text-secondary">
+    <section className="py-8 text-center bg-no-repeat bg-cover bg-wish bg-pos-wish font-catchy-mager text-secondary">
       <div className="container space-y-4">
-        <ScrollAnimation animateIn="tada">
-          <h2 className="font-playwrite-tz font-bold text-xl">Make a Wish</h2>
+        <ScrollAnimation
+          animateIn="fadeInUp"
+          className="mb-12 flex justify-between font-futura font-bold tracking-[0.4em] text-xs"
+        >
+          <p className="uppercase">Saturday</p>
+          <p className="uppercase">29| 06 | 24</p>
+        </ScrollAnimation>
+
+        <ScrollAnimation animateIn="fadeInUp">
+          <h2 className="text-xl font-bold font-playwrite-tz">Make a Wish</h2>
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp" className="my-2">
           <p>
@@ -87,7 +95,7 @@ export default function Wish() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
           <form
-            className="mt-2 flex flex-col gap-8 text-secondary"
+            className="flex flex-col gap-8 mt-2 text-secondary"
             onSubmit={handleSubmit(onSubmit)}
           >
             <div>
@@ -96,10 +104,10 @@ export default function Wish() {
                 placeholder="Nama"
                 type="text"
                 {...register("name")}
-                className="w-full rounded-md bg-primary px-4 py-1 placeholder:text-black placeholder:focus:text-primary"
+                className="w-full px-4 py-1 rounded-md bg-primary placeholder:text-black placeholder:focus:text-primary"
                 id="name"
               />
-              <p className="ml-4 text-left text-red-500 text-lg">
+              <p className="ml-4 text-lg text-left text-red-500">
                 {errors.name?.message}
               </p>
             </div>
@@ -108,11 +116,11 @@ export default function Wish() {
                 disabled={isLoading || isSubmitting}
                 {...register("wish")}
                 id="email"
-                className="w-full rounded-md bg-primary px-4 py-2 placeholder:text-black placeholder:focus:text-primary"
+                className="w-full px-4 py-2 rounded-md bg-primary placeholder:text-black placeholder:focus:text-primary"
                 placeholder="Ucapan"
                 rows={4}
               ></textarea>{" "}
-              <p className="ml-4 text-left text-red-500 text-lg">
+              <p className="ml-4 text-lg text-left text-red-500">
                 {errors.wish?.message}
               </p>
             </div>
@@ -127,7 +135,7 @@ export default function Wish() {
         </ScrollAnimation>
         <ScrollAnimation animateIn="fadeInUp">
           <ScrollArea className="h-[35rem]">
-            <div className="my-4 flex flex-col space-y-4 p-4">
+            <div className="flex flex-col p-4 my-4 space-y-4">
               {wish?.map((data) => <Comment key={data.id} wish={data} />)}
             </div>
           </ScrollArea>
@@ -159,10 +167,10 @@ export default function Wish() {
 
 function Comment({ wish }: { wish: wishType }) {
   return (
-    <div className="w-full animate-fade rounded-lg bg-white p-4 text-left shadow-md">
+    <div className="w-full p-4 text-left bg-white rounded-lg shadow-md animate-fade">
       <div>
         <h3 className="font-bold">{wish.name}</h3>
-        <p className="mb-2 text-gray-700 text-sm">
+        <p className="mb-2 text-sm text-gray-700">
           {new Date(Date.parse(wish.created_at)).toLocaleDateString("id", {
             day: "2-digit",
             month: "long",

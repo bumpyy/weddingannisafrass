@@ -29,6 +29,7 @@ export default {
       "frank-ruhl-libre": "Frank Ruhl Libre",
     },
     extend: {
+      zIndex: { 1: "1" },
       backgroundPosition: {
         "pos-wish": "left 52% center",
       },

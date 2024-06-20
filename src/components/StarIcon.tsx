@@ -7,7 +7,7 @@ export default function StarIcon({
 }) {
   return (
     <img
-      className={cn(`absolute z-0 size-20`, className)}
+      className={cn(`-z-1 absolute size-20`, className)}
       draggable={false}
       src="assets/images/star.png"
       alt=""

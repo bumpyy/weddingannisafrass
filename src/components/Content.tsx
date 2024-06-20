@@ -1,7 +1,8 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import GalleryCarousel from "./GalleryCarousel";
+import Filter from "./Filter";
+import Gallery from "./Gallery";
 import About from "./content/About";
 import Greeting from "./content/Greeting";
 import Rsvp from "./content/Rsvp";
@@ -15,7 +16,7 @@ export default function Content() {
 
   return (
     <div className="animate-fade bg-secondary text-primary">
-      <div className="mx-auto max-w-2xl">
+      <div className="max-w-2xl mx-auto">
         {/* <!-- Begin regular-section--> */}
         <Greeting />
         {/* <!-- End regular-section--> */}
@@ -27,10 +28,10 @@ export default function Content() {
         {/* <!-- Begin Waktu Section --> */}
         <Time />
         {/* <!-- End Waktu Content --> */}
-
+        <Filter />
         {/* <!-- Begin Lokasi Section --> */}
-        {/* <Gallery /> */}
-        <GalleryCarousel />
+        <Gallery />
+        {/* <GalleryCarousel /> */}
         {/* <!-- End Lokasi Content --> */}
 
         {/* <!-- Begin RSVP Content --> */}

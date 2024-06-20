@@ -1,4 +1,6 @@
 import { useCountdown } from "@/lib/hooks";
+import { CalendarIcon } from "@radix-ui/react-icons";
+import { MapPinIcon } from "lucide-react";
 import ScrollAnimation from "react-animate-on-scroll";
 import StarIcon from "../StarIcon";
 import { Button } from "../ui/button";
@@ -11,7 +13,32 @@ export default function Time() {
       className="container relative flex flex-col items-center gap-4 py-20 text-center text-accent"
       id="waktu"
     >
-      <Event
+      <div className="mb-20 space-y-6">
+        <h2 className="text-xl font-playfair-display">Count the Date</h2>
+        <div className="grid justify-around grid-cols-2 gap-4">
+          <CountdownCard text="Hari" countdown={day} />
+          <CountdownCard text="Jam" countdown={hour} />
+          <CountdownCard text="Menit" countdown={minutes} />
+          <CountdownCard text="Detik" countdown={seconds} />
+        </div>
+        <Button
+          asChild
+          className="px-2 mb-4 text-lg italic font-semibold font-noto-serif-display"
+        >
+          <a
+            href=""
+            //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
+            target="_blank"
+            className=""
+            data-tooltip="Open map"
+          >
+            <CalendarIcon className="mr-2 size-6" />
+            Google Maps
+          </a>
+        </Button>
+      </div>
+
+      {/* <Event
         title="Khitbah"
         date="JUM’AT, 13 APRIL 2024"
         time="19.30 - 21.30 WIB"
@@ -22,7 +49,7 @@ export default function Time() {
           Jl Bbkn Stasiun Cicalengka, Rt02/09 Desa Panenjoan,Kec cicalengka, Kab
           Bandung, 40395
         </p>
-      </Event>
+      </Event> */}
 
       <Event
         title="AKAD NIKAH"
@@ -36,6 +63,12 @@ export default function Time() {
         </p>
       </Event>
 
+      <ScrollAnimation
+        animateIn="fadeInUp"
+        className="flex-grow w-4/5 mx-auto my-6 border-t border-white"
+        delay={300}
+      ></ScrollAnimation>
+
       <Event
         title="RESEPSI NIKAH"
         date="SABTU, 29 JUNI 2024"
@@ -47,31 +80,9 @@ export default function Time() {
         </p>
       </Event>
 
-      <h2 className="my-4 font-noto-serif-display italic text-primary text-lg">
+      {/* <h2 className="my-4 text-lg italic font-noto-serif-display text-primary">
         Wedding Event
-      </h2>
-
-      <Button
-        asChild
-        className="mb-4 px-8 font-noto-serif-display font-semibold italic text-lg"
-      >
-        <a
-          href="https://maps.app.goo.gl/t9iVCDwwV6kAxs9u5?g_st=ic"
-          //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
-          target="_blank"
-          className=""
-          data-tooltip="Open map"
-        >
-          Google Maps
-        </a>
-      </Button>
-
-      <div className="flex flex-wrap justify-around gap-4">
-        <CountdownCard text="Hari" countdown={day} />
-        <CountdownCard text="Jam" countdown={hour} />
-        <CountdownCard text="Menit" countdown={minutes} />
-        <CountdownCard text="Detik" countdown={seconds} />
-      </div>
+      </h2> */}
 
       <StarIcon />
       <StarIcon className="bottom-0 left-0 size-24" />
@@ -90,7 +101,7 @@ function CountdownCard({
 
   return (
     <div>
-      <div className="flex items-center justify-center gap-1 text-center font-semibold text-secondary text-lg">
+      <div className="flex items-center justify-center gap-1 text-lg font-semibold text-center text-secondary">
         <p
           className={`flex size-9 items-center justify-center rounded-sm bg-primary p-1`}
         >
@@ -127,17 +138,34 @@ export function Event({
         animateIn="fadeInUp"
         className="font-thin tracking-wider text-primary"
       >
-        <h2 className="font-playfair-display uppercase text-xl">{title}</h2>
-        <p className="font-sanchez font-thin">{date}</p>
-        <p className="font-sanchez font-thin">{time}</p>
-        <div className="font-playfair-display font-light text-xxs">
-          {children}
+        <div>
+          <h2 className="text-xl uppercase font-playfair-display">{title}</h2>
+          <p className="font-thin font-sanchez">{date}</p>
+          <p className="font-thin font-sanchez">{time}</p>
         </div>
-      </ScrollAnimation>
 
-      {addDivider && (
-        <div className="mx-auto mt-2 w-3/5 flex-grow border-t border-white"></div>
-      )}
+        <div className="my-6 font-light font-playfair-display">{children}</div>
+
+        <Button
+          asChild
+          size={"sm"}
+          className="px-8 italic font-semibold font-noto-serif-display"
+        >
+          <a
+            href="https://maps.app.goo.gl/t9iVCDwwV6kAxs9u5?g_st=ic"
+            //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
+            target="_blank"
+            className=""
+            data-tooltip="Open map"
+          >
+            <MapPinIcon className="mr-2 size-6" />
+            Google Maps
+          </a>
+        </Button>
+        {/* {addDivider && (
+          <div className="flex-grow w-3/5 mx-auto mt-2 border-t border-white"></div>
+        )} */}
+      </ScrollAnimation>
     </div>
   );
 }
