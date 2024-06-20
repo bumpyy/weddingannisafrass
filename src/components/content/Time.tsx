@@ -24,10 +24,10 @@ export default function Time() {
           </div>
           <Button
             asChild
-            className="px-2 mb-4 text-lg italic font-semibold font-noto-serif-display"
+            className="px-2 my-4 mt-8 italic font-semibold font-noto-serif-display"
           >
             <a
-              href="https://www.google.com/calendar/render?action=TEMPLATE&text=THE+WEDDING+OF+Annisa+%26+Frass&location=https%3A%2F%2Fmaps.app.goo.gl%2Ft9iVCDwwV6kAxs9u5%3Fg_st%3Dic&dates=20240628T175700Z%2F20240628T175700Z"
+              href="https://www.google.com/calendar/render?action=TEMPLATE&text=THE+WEDDING+OF+Annisa+%26+Frass&location=https%3A%2F%2Fmaps.app.goo.gl%2Ft9iVCDwwV6kAxs9u5%3Fg_st%3Dic&dates=20240629T010000Z%2F20240629T020000Z"
               //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
               target="_blank"
               className=""
