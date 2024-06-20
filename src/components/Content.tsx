@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Filter from "./Filter";
 import Gallery from "./Gallery";
+import Journey from "./Journey";
 import About from "./content/About";
 import Greeting from "./content/Greeting";
 import Rsvp from "./content/Rsvp";
@@ -24,7 +25,7 @@ export default function Content() {
         {/* <!-- Begin Tentang mempelai --> */}
         <About />
         {/* <!-- End Tentang mempelai --> */}
-
+        <Journey />
         {/* <!-- Begin Waktu Section --> */}
         <Time />
         {/* <!-- End Waktu Content --> */}

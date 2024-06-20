@@ -14,28 +14,30 @@ export default function Time() {
       id="waktu"
     >
       <div className="mb-20 space-y-6">
-        <h2 className="text-xl font-playfair-display">Count the Date</h2>
-        <div className="grid justify-around grid-cols-2 gap-4">
-          <CountdownCard text="Hari" countdown={day} />
-          <CountdownCard text="Jam" countdown={hour} />
-          <CountdownCard text="Menit" countdown={minutes} />
-          <CountdownCard text="Detik" countdown={seconds} />
-        </div>
-        <Button
-          asChild
-          className="px-2 mb-4 text-lg italic font-semibold font-noto-serif-display"
-        >
-          <a
-            href=""
-            //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
-            target="_blank"
-            className=""
-            data-tooltip="Open map"
+        <ScrollAnimation animateIn="fadeInUp">
+          <h2 className="mb-6 text-xl font-playfair-display">Count the Date</h2>
+          <div className="grid justify-around grid-cols-2 gap-4">
+            <CountdownCard text="Hari" countdown={day} />
+            <CountdownCard text="Jam" countdown={hour} />
+            <CountdownCard text="Menit" countdown={minutes} />
+            <CountdownCard text="Detik" countdown={seconds} />
+          </div>
+          <Button
+            asChild
+            className="px-2 mb-4 text-lg italic font-semibold font-noto-serif-display"
           >
-            <CalendarIcon className="mr-2 size-6" />
-            Google Maps
-          </a>
-        </Button>
+            <a
+              href="https://www.google.com/calendar/render?action=TEMPLATE&text=THE+WEDDING+OF+Annisa+%26+Frass&location=https%3A%2F%2Fmaps.app.goo.gl%2Ft9iVCDwwV6kAxs9u5%3Fg_st%3Dic&dates=20240628T175700Z%2F20240628T175700Z"
+              //   href="https://maps.app.goo.gl/xubkdGhLja2ZAGHh7"
+              target="_blank"
+              className=""
+              data-tooltip="Open map"
+            >
+              <CalendarIcon className="mr-2 size-6" />
+              Save to calendar
+            </a>
+          </Button>
+        </ScrollAnimation>
       </div>
 
       {/* <Event

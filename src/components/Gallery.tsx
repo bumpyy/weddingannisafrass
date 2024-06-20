@@ -26,11 +26,11 @@ export default function Gallery() {
   ];
   return (
     <section className="container relative py-16">
-      <h2 className="mb-6 text-lg italic text-center font-noto-serif-display">
-        Our Gallery
-      </h2>
-
       <ScrollAnimation animateIn="fadeInUp">
+        <h2 className="mb-6 text-lg italic text-center font-noto-serif-display">
+          Our Gallery
+        </h2>
+
         <div className="grid grid-cols-3 grid-rows-1 gap-4">
           {photoGrid1.map((photo) => (
             <GalleryPhoto key={photo.name} photo={photo} />
