@@ -25,7 +25,7 @@ export default function Preload({
         {/* <h1 className="font-thin animate-once animate-fade-down font-catchy-mager">
           Undangan Pernikahan
         </h1> */}
-        <h1 className="flex flex-col text-6xl italic animate-fade-down animate-once animate-delay-200 gap-y-6 font-playfair-display">
+        <h1 className="animate-fade-down animate-once animate-delay-200 flex flex-col gap-y-6 font-playfair-display italic text-6xl">
           <span className="self-start">{MEMPELAI_WANITA}</span>
           <span className="self-center text-5xl">&</span>
           <span className="self-end">{MEMPELAI_PRIA}</span>
@@ -33,22 +33,22 @@ export default function Preload({
 
         <StarIcon />
       </div>
-      <div className="relative">
+      <div className="relative basis-3/5">
         <img
-          className="max-h-1/2 brightness-75 saturate-50"
+          className="brightness-75 saturate-50"
           src="assets/images/preload.png"
           alt="preload image"
           draggable={false}
         />
 
-        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-[15%] flex-col items-center justify-center gap-y-4 font-catchy-mager text-white">
+        <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-y-4 font-catchy-mager text-white">
           <h2 className="text-2xl">Dear</h2>
-          <p className="mb-2 text-7xl">Fira</p>
-          {guestName && <p className="text-xl font-semibold">{guestName}</p>}
+          {/* <p className="mb-2 text-7xl">Fira</p> */}
+          {guestName && <p className="font-semibold text-xl">{guestName}</p>}
           <Button
             variant={"outline"}
             size={"sm"}
-            className="px-4 text-sm font-semibold leading-none text-black font-futura"
+            className="px-4 font-futura font-semibold leading-none text-black text-sm"
             onClick={() => {
               setIsAnimating(true);
               const audio = document.getElementById(
