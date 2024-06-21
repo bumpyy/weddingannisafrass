@@ -37,16 +37,16 @@ export default function Preload({
 
       <div className="relative h-full">
         <img
-          className="h-full object-cover object-bottom brightness-50 saturate-50"
+          className="mx-auto h-full object-cover object-bottom brightness-50 saturate-50"
           src="assets/images/preload.png"
           alt="preload image"
           draggable={false}
         />
 
-        <div className="absolute bottom-1/4 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-y-4 text-center font-catchy-mager text-primary md:bottom-1/2 md:-translate-y-1/2">
+        <div className="absolute bottom-1/4 left-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-y-4 text-center font-catchy-mager text-primary md:bottom-1/2 md:-translate-y-1/2">
           <h2 className="text-lg">Kepada Bpk/Ibu/Saudara/i</h2>
           {/* <p className="mb-2 text-7xl">Fira</p> */}
-          {guestName && <p className="mb-2 text-7xl">{guestName}</p>}
+          {guestName && <p className="mb-2 text-2xl">{guestName}</p>}
           <Button
             variant={"outline"}
             size={"sm"}
