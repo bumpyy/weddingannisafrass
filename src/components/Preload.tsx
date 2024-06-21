@@ -33,7 +33,7 @@ export default function Preload({
 
         <StarIcon />
       </div>
-      <div className="relative basis-3/5">
+      <div className="relative basis-3/4">
         <img
           className="brightness-75 saturate-50"
           src="assets/images/preload.png"

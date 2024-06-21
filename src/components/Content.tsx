@@ -2,7 +2,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Filter from "./Filter";
-import Gallery from "./Gallery";
+import GalleryCarousel from "./GalleryCarousel";
 import Journey from "./Journey";
 import About from "./content/About";
 import Greeting from "./content/Greeting";
@@ -17,7 +17,7 @@ export default function Content() {
 
   return (
     <div className="animate-fade bg-secondary text-primary">
-      <div className="max-w-2xl mx-auto">
+      <div className="mx-auto max-w-2xl">
         {/* <!-- Begin regular-section--> */}
         <Greeting />
         {/* <!-- End regular-section--> */}
@@ -31,7 +31,7 @@ export default function Content() {
         {/* <!-- End Waktu Content --> */}
         <Filter />
         {/* <!-- Begin Lokasi Section --> */}
-        <Gallery />
+        <GalleryCarousel />
         {/* <GalleryCarousel /> */}
         {/* <!-- End Lokasi Content --> */}
 

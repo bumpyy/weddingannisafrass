@@ -12,6 +12,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import ScrollAnimation from "react-animate-on-scroll";
 
 export default function GalleryCarousel() {
   const photos: {
@@ -21,11 +22,13 @@ export default function GalleryCarousel() {
     { name: "gallery_2", position: "object-center" },
     { name: "gallery_3", position: "object-bottom" },
     { name: "gallery_4", position: "object-center" },
+
     { name: "bride_female", position: "object-center" },
     { name: "bride_male", position: "object-center" },
+
     { name: "gallery_7", position: "object-center" },
-    { name: "gallery_6", position: "object-center" },
     { name: "gallery_1", position: "object-center" },
+    { name: "gallery_6", position: "object-center" },
 
     // { name: "gallery_5", position: "object-top" },
   ];
@@ -49,47 +52,53 @@ export default function GalleryCarousel() {
 
   return (
     <section className="container relative py-16">
-      <h2 className="mb-8 text-center font-noto-serif-display italic text-lg">
-        Our Gallery
-      </h2>
-      <Carousel setApi={setApi} className="mx-auto w-full max-w-64 sm:max-w-xs">
-        <CarouselContent>
-          {photos.map((photo) => (
-            <CarouselItem key={photo.name}>
-              <Card>
-                <CardContent>
-                  <Dialog key={photo.name}>
-                    <DialogTrigger>
-                      <div
-                        key={photo.name}
-                        className="aspect-square cursor-pointer overflow-hidden rounded-md transition-transform duration-700 hover:scale-110"
-                      >
+      <ScrollAnimation animateIn="fadeInUp">
+        <h2 className="mb-8 text-center font-noto-serif-display italic text-lg">
+          Our Gallery
+        </h2>
+        <Carousel
+          setApi={setApi}
+          className="mx-auto w-full max-w-64 sm:max-w-xs"
+        >
+          <CarouselContent>
+            {photos.map((photo) => (
+              <CarouselItem key={photo.name}>
+                <Card>
+                  <CardContent>
+                    <Dialog key={photo.name}>
+                      <DialogTrigger>
+                        <div
+                          key={photo.name}
+                          className="aspect-square cursor-pointer overflow-hidden rounded-md transition-transform duration-700 hover:scale-110"
+                        >
+                          <img
+                            src={`assets/images/${photo.name}_thumb.jpeg`}
+                            className={`h-full w-full object-cover ${photo.position}`}
+                            alt=""
+                          />
+                        </div>
+                      </DialogTrigger>
+                      <DialogContent>
                         <img
-                          src={`assets/images/${photo.name}_thumb.jpeg`}
+                          src={`assets/images/${photo.name}.jpeg`}
                           className={`h-full w-full object-cover ${photo.position}`}
                           alt=""
                         />
-                      </div>
-                    </DialogTrigger>
-                    <DialogContent>
-                      <img
-                        src={`assets/images/${photo.name}.jpeg`}
-                        className={`h-full w-full object-cover ${photo.position}`}
-                        alt=""
-                      />
-                    </DialogContent>
-                  </Dialog>
-                </CardContent>
-              </Card>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-      <div className="py-2 text-center text-muted-foreground text-sm">
-        Photo {current} of {count}
-      </div>
+                      </DialogContent>
+                    </Dialog>
+                  </CardContent>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+        <div className="py-2 text-center text-muted-foreground text-sm">
+          Photo {current} of {count}
+        </div>
+      </ScrollAnimation>
+
       <StarIcon className="right-0 top-0 size-14" />
       <StarIcon className="bottom-0 left-0 size-16" />
     </section>
