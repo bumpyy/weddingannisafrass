@@ -27,7 +27,7 @@ export default function Gallery() {
   return (
     <section className="container relative py-16">
       <ScrollAnimation animateIn="fadeInUp">
-        <h2 className="mb-6 text-lg italic text-center font-noto-serif-display">
+        <h2 className="mb-6 text-center font-noto-serif-display italic text-lg">
           Our Gallery
         </h2>
 
@@ -38,7 +38,7 @@ export default function Gallery() {
         </div>
       </ScrollAnimation>
       <ScrollAnimation animateIn="fadeInUp">
-        <div className="grid grid-cols-2 grid-rows-1 gap-4 mx-12 my-4">
+        <div className="mx-12 my-4 grid grid-cols-2 grid-rows-1 gap-4">
           {photoGrid2.map((photo) => (
             <GalleryPhoto key={photo.name} photo={photo} />
           ))}
@@ -51,7 +51,7 @@ export default function Gallery() {
           ))}
         </div>
       </ScrollAnimation>
-      <StarIcon className="top-0 right-0 size-14" />
+      <StarIcon className="right-0 top-0 size-14" />
       <StarIcon className="bottom-0 left-0 size-16" />
     </section>
   );
@@ -63,7 +63,7 @@ export function GalleryPhoto({ photo }: { photo: TPhotoGrid }) {
       <DialogTrigger>
         <div
           key={photo.name}
-          className="overflow-hidden transition-transform duration-700 rounded-md cursor-pointer aspect-square hover:z-20 hover:scale-110 hover:shadow-lg"
+          className="aspect-square cursor-pointer overflow-hidden rounded-md transition-transform duration-700 hover:z-20 hover:scale-110 hover:shadow-lg"
         >
           <img
             src={`assets/images/${photo.name}_thumb.jpeg`}
