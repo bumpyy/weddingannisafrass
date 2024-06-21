@@ -34,7 +34,7 @@ export default function Preload({
         <StarIcon />
       </div>
 
-      <div className="relative h-full">
+      <div className="relative h-dvh">
         <img
           className="object-bottom brightness-75 saturate-50"
           src="assets/images/preload.png"
