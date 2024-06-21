@@ -41,7 +41,7 @@ export default function Preload({
           draggable={false}
         />
 
-        <div className="absolute bottom-1/2 left-1/2 flex -translate-x-1/2 -translate-y-[15%] flex-col items-center justify-center gap-y-4 font-catchy-mager text-white">
+        <div className="absolute bottom-16 left-1/2 flex -translate-x-1/2 -translate-y-[15%] flex-col items-center justify-center gap-y-4 font-catchy-mager text-white">
           <h2 className="text-2xl">Dear</h2>
           {/* <p className="mb-2 text-7xl">Fira</p> */}
           {guestName && <p className="font-semibold text-xl">{guestName}</p>}
