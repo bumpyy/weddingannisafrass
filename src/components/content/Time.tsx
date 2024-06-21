@@ -164,9 +164,9 @@ export function Event({
             Google Maps
           </a>
         </Button>
-        {/* {addDivider && (
+        {addDivider && (
           <div className="flex-grow w-3/5 mx-auto mt-2 border-t border-white"></div>
-        )} */}
+        )}
       </ScrollAnimation>
     </div>
   );
