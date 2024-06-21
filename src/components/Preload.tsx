@@ -44,8 +44,8 @@ export default function Preload({
         />
 
         <div className="absolute bottom-1/4 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-y-4 text-center font-catchy-mager text-primary md:bottom-1/2 md:-translate-y-1/2">
-          <h2 className="text-lg">Kepada Bpk/Ibu/Saudara/i</h2>
-          <p className="mb-2 text-7xl">Fira</p>
+          <h2 className="text-lg">Kepada BpK/Ibu/Saudara/i</h2>
+          {/* <p className="mb-2 text-7xl">Fira</p> */}
           {guestName && <p className="font-semibold text-xl">{guestName}</p>}
           <Button
             variant={"outline"}
