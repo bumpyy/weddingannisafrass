@@ -36,7 +36,7 @@ export default function Preload({
 
       <div className="relative h-full">
         <img
-          className="h-full brightness-75 saturate-50"
+          className="object-bottom brightness-75 saturate-50"
           src="assets/images/preload.png"
           alt="preload image"
           draggable={false}
