@@ -29,14 +29,14 @@ export default function Journey() {
       title: "MENIKAH",
       date: "Juni 2024",
       content:
-        "Jika dihitung dengan jari sampai pada hari bahagia ini terasa begitu singkat. Namun untuk suatu do'a akan terus mengalir. Untuk itu kamu memohon do'a dari keluarga, saudara, sahabat. Agar acara kami berjalan dengan Alhamdulillah lancar dan dimudahkan dalam segala hal.",
+        "Jika dihitung dengan jari sampai pada hari bahagia ini terasa begitu singkat. Namun untuk suatu do'a akan terus mengalir. Untuk itu kami memohon do'a dari keluarga, saudara, sahabat. Agar acara kami berjalan dengan Alhamdulillah lancar dan dimudahkan dalam segala hal.",
     },
   ];
 
   return (
     <section className="container">
       <ScrollAnimation animateIn="fadeInUp">
-        <h2 className="mb-4 text-2xl italic font-noto-serif-display">
+        <h2 className="mb-4 font-noto-serif-display italic text-2xl">
           Our Journey
         </h2>
         <img
@@ -67,10 +67,10 @@ function JourneyCard({ journey }: { journey: TJourneyItem }) {
           draggable={false}
           alt=""
         />
-        <p className="text-lg italic font-noto-serif-display">
+        <p className="font-noto-serif-display italic text-lg">
           {journey.title}
         </p>
-        <p className="mt-2 mb-1">{journey.date}</p>
+        <p className="mb-1 mt-2">{journey.date}</p>
         <p className="text-xs">{journey.content}</p>
         <img
           src="assets/images/star3.png"
