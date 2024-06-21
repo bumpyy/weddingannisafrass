@@ -19,7 +19,7 @@ export default function Preload({
           openHandler(true);
         }
       }}
-      className={`${isAnimating ? "animate-once animate-slide-up" : ""} fixed flex h-screen w-full flex-col items-center justify-between overflow-y-hidden bg-secondary pt-8`}
+      className={`${isAnimating ? "animate-once animate-slide-up" : ""} fixed flex h-dvh w-full flex-col items-center justify-between overflow-y-hidden bg-secondary pt-8`}
     >
       <div className="container relative w-full max-w-2xl shrink basis-full space-y-8 text-center text-primary">
         {/* <h1 className="font-thin animate-once animate-fade-down font-catchy-mager">
@@ -34,7 +34,7 @@ export default function Preload({
         <StarIcon />
       </div>
 
-      <div className="relative h-lvh">
+      <div className="relative">
         <img
           className="object-bottom brightness-75 saturate-50"
           src="assets/images/preload.png"
