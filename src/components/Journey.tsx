@@ -71,7 +71,7 @@ function JourneyCard({ journey }: { journey: TJourneyItem }) {
           {journey.title}
         </p>
         <p className="mb-1 mt-2">{journey.date}</p>
-        <p className="text-xs">{journey.content}</p>
+        <p className="text-left text-xs">{journey.content}</p>
         <img
           src="assets/images/star3.png"
           className="absolute -bottom-6 -right-6 size-16"

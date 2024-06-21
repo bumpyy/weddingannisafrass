@@ -19,32 +19,33 @@ export default function Preload({
           openHandler(true);
         }
       }}
-      className={`${isAnimating ? "animate-once animate-slide-up" : ""} fixed flex h-dvh w-full flex-col items-center justify-between overflow-y-hidden bg-secondary pt-8`}
+      className={`${isAnimating ? "animate-once animate-slide-up" : ""} relative h-dvh w-full items-center justify-between overflow-y-hidden bg-secondary pt-8`}
     >
       <div className="container relative w-full max-w-2xl shrink basis-full space-y-8 text-center text-primary">
         {/* <h1 className="font-thin animate-once animate-fade-down font-catchy-mager">
           Undangan Pernikahan
         </h1> */}
-        <h1 className="animate-fade-down animate-once animate-delay-200 flex flex-col gap-y-6 font-playfair-display italic text-6xl">
-          <span className="self-start">{MEMPELAI_WANITA}</span>
-          <span className="self-center text-5xl">&</span>
-          <span className="self-end">{MEMPELAI_PRIA}</span>
-        </h1>
+        <div className="pb-10 pt-16 text-center font-playfair-display">
+          <h1 className="mb-4">The Wedding Of</h1>
+          <p className="animate-fade-down animate-once animate-delay-200 flex flex-col gap-y-6 italic text-6xl">
+            {MEMPELAI_WANITA} & {MEMPELAI_PRIA}
+          </p>
+        </div>
 
         <StarIcon />
       </div>
 
-      <div className="relative">
+      <div className="relative h-full">
         <img
-          className="object-bottom brightness-75 saturate-50"
+          className="h-full object-cover object-bottom brightness-50 saturate-50"
           src="assets/images/preload.png"
           alt="preload image"
           draggable={false}
         />
 
-        <div className="absolute bottom-16 left-1/2 flex -translate-x-1/2 -translate-y-[15%] flex-col items-center justify-center gap-y-4 font-catchy-mager text-white md:bottom-1/2 md:-translate-y-1/2">
-          <h2 className="text-2xl">Dear</h2>
-          {/* <p className="mb-2 text-7xl">Fira</p> */}
+        <div className="absolute bottom-1/4 left-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-y-4 text-center font-catchy-mager text-primary md:bottom-1/2 md:-translate-y-1/2">
+          <h2 className="text-lg">Kepada Bpk/Ibu/Saudara/i</h2>
+          <p className="mb-2 text-7xl">Fira</p>
           {guestName && <p className="font-semibold text-xl">{guestName}</p>}
           <Button
             variant={"outline"}

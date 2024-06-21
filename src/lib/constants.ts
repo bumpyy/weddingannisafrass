@@ -5,7 +5,7 @@ export const IBU_MEMPELAI_PRIA = "Ibu Minarti";
 
 export const MEMPELAI_WANITA = "Annisa";
 export const MEMPELAI_WANITA_lengkap = "Annisa Nurjannah";
-export const BAPAK_MEMPELAI_WANITA = "Bapah Ahi ";
+export const BAPAK_MEMPELAI_WANITA = "BapaK Ahi ";
 export const IBU_MEMPELAI_WANITA = "Ibu Tien Hertini";
 
 export const LOCATION = `Jl Rancakihiang RT 02/09, Bojongloa, Kec
