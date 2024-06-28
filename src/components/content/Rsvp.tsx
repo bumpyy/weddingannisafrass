@@ -12,17 +12,17 @@ export default function Rsvp() {
   return (
     <section
       id="share-love"
-      className="container relative flex flex-col gap-6 pb-16 my-12 font-thin tracking-wider text-center font-catchy-mager text-accent"
+      className="container relative my-12 flex flex-col gap-6 pb-16 text-center font-catchy-mager font-thin tracking-wider text-accent"
     >
       <ScrollAnimation animateIn="fadeInUp">
-        <h2 className="text-xl capitalize font-playwrite-tz">Share Love</h2>
+        <h2 className="font-playwrite-tz capitalize text-xl">Share Love</h2>
       </ScrollAnimation>
 
       <ScrollAnimation
         animateIn="fadeInUp"
-        className="flex flex-col items-center justify-center mt-2 text-xs text-center sm:text-xl"
+        className="mt-2 flex flex-col items-center justify-center text-center text-xs sm:text-xl"
       >
-        <p className="text-xs text-justify">
+        <p className="text-justify text-xs">
           Doa & restu anda di pernikahan kami tentunya sangat berarti. Namun
           jika anda ingin memberi lebih, kami dengan senang hati menerimanya dan
           akan semakin melengkapi kebahagiaan kami.
@@ -33,15 +33,15 @@ export default function Rsvp() {
         animateIn="fadeInUp"
         className="flex flex-col items-center"
       >
-        <p className="">BCA - 6395468077</p>
+        <p className="">BCA - 3761056768</p>
         <p className="">Annisa nurjannah</p>
 
         <CopyToClipboard
-          text={"6395468077"}
+          text={"3761056768"}
           onCopy={() => {
             toast({
               title: "Tersalin : Annisa nurjannah",
-              description: "BCA - 6395468077",
+              description: "BCA - 3761056768",
               action: <ToastAction altText="tutup">Tutup</ToastAction>,
             });
           }}
@@ -78,10 +78,10 @@ export default function Rsvp() {
       </ScrollAnimation>
 
       <ScrollAnimation animateIn="fadeInUp">
-        <h2 className="text-2xl capitalize font-playwrite-tz">Send gift</h2>
+        <h2 className="font-playwrite-tz capitalize text-2xl">Send gift</h2>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn="fadeInUp" className="w-2/5 mx-auto">
+      <ScrollAnimation animateIn="fadeInUp" className="mx-auto w-2/5">
         <img src="assets/images/gift.png" alt="gift icon" draggable="false" />
       </ScrollAnimation>
 
@@ -93,7 +93,7 @@ export default function Rsvp() {
         </p>
       </ScrollAnimation>
 
-      <StarIcon className="top-0 right-0 size-16" />
+      <StarIcon className="right-0 top-0 size-16" />
       <StarIcon className="bottom-0 left-0 size-20" />
     </section>
   );
